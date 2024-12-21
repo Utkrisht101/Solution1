@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - AI Meal Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Profile</h1>
+        <p>Customize your dietary preferences and goals</p>
+    </header>
+    <main>
+        <section class="profile-form">
+            <form action="/save-profile" method="post">
+                <!-- Dietary Preferences -->
+                <fieldset>
+                    <legend>Dietary Preferences</legend>
+                    <label>
+                        <input type="radio" name="diet" value="vegetarian" required>
+                        Vegetarian
+                    </label>
+                    <label>
+                        <input type="radio" name="diet" value="vegan">
+                        Vegan
+                    </label>
+                    <label>
+                        <input type="radio" name="diet" value="non-vegetarian">
+                        Non-Vegetarian
+                    </label>
+                    <label>
+                        <input type="radio" name="diet" value="pescatarian">
+                        Pescatarian
+                    </label>
+                </fieldset>
+
+                <!-- Allergies -->
+                <fieldset>
+                    <legend>Allergies</legend>
+                    <label for="allergies">List any allergies:</label>
+                    <textarea id="allergies" name="allergies" placeholder="e.g., peanuts, gluten" rows="3"></textarea>
+                </fieldset>
+
+                <!-- Health Goals -->
+                <fieldset>
+                    <legend>Health Goals</legend>
+                    <select name="health-goal" required>
+                        <option value="" disabled selected>Select your health goal</option>
+                        <option value="weight-loss">Weight Loss</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="maintain-weight">Maintain Weight</option>
+                        <option value="improve-fitness">Improve Fitness</option>
+                    </select>
+                </fieldset>
+
+                <!-- Daily Calorie Intake Target -->
+                <fieldset>
+                    <legend>Daily Calorie Intake Target</legend>
+                    <label for="calorie-target">Enter your target (in kcal):</label>
+                    <input type="number" id="calorie-target" name="calorie-target" placeholder="e.g., 2000" required min="1000" max="5000">
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Save Profile</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 AI Meal Planner. All rights reserved.</p>
+    </footer>
+</body>
+</html>
